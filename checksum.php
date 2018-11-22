@@ -1,16 +1,14 @@
 #!/usr/bin/php
 <?php
 
-if (PHP_SAPI !== 'cli') {
-    throw new RuntimeException('This is a script meant to run in a CLI');
-}
+require __DIR__.'/vendor/autoload.php';
 
-if ($argc < 3) {
-    throw new InvalidArgumentException('Invalid Arguments: Please include file path as the first argument and the checksum as the second argument');
-}
+$application = new \Symfony\Component\Console\Application();
 
-if (hash_file('sha256', $argv[1]) === $argv[2]) {
-    echo "OK\n";
-} else {
-    echo "FAIL\n";
-}
+$command = new \Codayblue\ChecksumCommand();
+
+$application->add($command);
+
+$application->setDefaultCommand($command->getName(), true);
+
+$application->run();

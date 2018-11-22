@@ -1,0 +1,20 @@
+{
+    "name": "codayblue/checksum",
+    "description": "A CLI application that will check a checksum against a hash and return if it is okay or fails",
+    "type": "project",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "codayblue",
+            "email": "codayblue@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Codayblue\\": "src/"
+        }
+    },
+    "require": {
+        "symfony/console": "^4.1"
+    }
+}
