@@ -16,5 +16,11 @@
     },
     "require": {
         "symfony/console": "^4.1"
+    },
+    "require-dev": {
+        "phpstan/phpstan": "^0.10.5"
+    },
+    "scripts": {
+        "stan": "vendor/bin/phpstan analyse --level 5 src index.php"
     }
 }

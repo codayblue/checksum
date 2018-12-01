@@ -1,0 +1,4 @@
+{
+    "main": "src/app.php",
+    "output": "build/checksum.phar"
+}

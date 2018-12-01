@@ -1,6 +1,6 @@
 <?php
 
-namespace Codayblue;
+namespace Codayblue\Command;
 
 
 use Symfony\Component\Console\Command\Command;
