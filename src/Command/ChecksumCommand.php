@@ -14,7 +14,7 @@ class ChecksumCommand extends Command
     protected function configure()
     {
         $this
-            ->setName('app:checksum:check')
+            ->setName('checksum')
             ->setDescription('This command takes the file path and checksum hash and checks if they match')
             ->setHelp('First argument is file path. Second argument is checksum hash')
             ->addArgument('filepath', InputArgument::REQUIRED)
